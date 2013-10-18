@@ -37,7 +37,7 @@ class BuilderFactory
 
     public function url($original)
     {
-		$original = str_replace('+', ' ', $original);
+        $original = str_replace('+', '%20', $original);
         return Builder::construct($this->server, $this->secret, $original);
     }
 }
